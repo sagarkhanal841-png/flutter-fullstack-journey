@@ -1,14 +1,5 @@
 void main(){
-  List<int> number=[];
-    if(number.isEmpty){
-      print('List is empty');
-    }else{
-      int largest=number[0];
-      for(int i=1;i<number.length;i++){
-        if(number[i]>largest){
-          largest=number[i];
-        }
-      }
-      print('Largestnumber= $largest');
-    }
+  List<int> prices=[100, 250, 80, 400];
+  var result=prices.where((n)=>n >=100).map((n)=>n-(n*0.10)).toList();
+  print(result);
 }
